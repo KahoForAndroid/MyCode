@@ -69,6 +69,7 @@ public class Take_medicine_Activity extends BaseActivity implements View.OnClick
     private DateUtil dateUtil = new DateUtil();
     private int DeletePosition;
     private boolean updated;//是否需要刷新日历页面
+    private int text = 0;
 
 
     private Handler reminderListHandler = new Handler(){
