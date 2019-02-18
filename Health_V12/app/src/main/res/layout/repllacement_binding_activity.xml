@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_bg"
+    >
+
+    <include layout="@layout/top_null_bg_layout"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/top_check_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp"
+            android:src="@drawable/mian_checkbox_checked"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/Security_problem_binding"
+            android:layout_toRightOf="@+id/top_check_img"
+            android:textColor="@color/black"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_bottom_line"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/question_rela"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/drop_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/main_drop_down_icon"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/main_textTitleSize"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:text="@string/selected_question"
+            android:textColor="@color/black"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_bottom_line"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <EditText
+            android:id="@+id/input_Answer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/main_textTitleSize"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:hint="@string/input_Answer"
+            android:textColor="@color/black"
+            android:background="@null"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_bottom_line"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/top_bottom_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp"
+            android:src="@drawable/mian_checkbox_notchecked"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/Relatives_and_friends"
+            android:layout_toRightOf="@+id/top_bottom_img"
+            android:textColor="@color/black"
+            />
+
+
+    </RelativeLayout>
+
+
+<LinearLayout
+    android:id="@+id/gone_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:visibility="gone"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/title_bottom_line"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/input_friends_phone"
+            android:textSize="@dimen/main_textTitleSize"
+            android:layout_marginLeft="20dp"
+            android:inputType="phone"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_bottom_line"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <EditText
+            android:id="@+id/ed_Verification_Code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:hint="@string/sms_Verification_Code"
+            android:inputType="number"
+            android:textSize="@dimen/main_textTitleSize"
+            android:layout_toLeftOf="@+id/get_Verification_Code_rl"
+            />
+        <RelativeLayout
+            android:id="@+id/get_Verification_Code_rl"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/layou_onclick"
+            android:layout_alignParentRight="true"
+            >
+            <TextView
+                android:id="@+id/get_Verification_Code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:text="@string/get_Verification_Code"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_bottom_line"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</LinearLayout>
+
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/gary_button"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_textTitleSize"
+        />
+
+</LinearLayout>

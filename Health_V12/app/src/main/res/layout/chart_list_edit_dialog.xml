@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/popwindow_layout"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/popwindow_lin"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/shape_corner"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/line"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                />
+         <RelativeLayout
+             android:id="@+id/Systolic_rela"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_below="@+id/title"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:layout_marginTop="10dp"
+             >
+             <TextView
+                 android:id="@+id/Systolic"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="@dimen/main_textSize"
+                 android:textColor="@color/black"
+                 android:text="@string/systolic"
+                 android:layout_centerVertical="true"
+                 />
+             <EditText
+                 android:id="@+id/Systolic_text"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_toRightOf="@+id/Systolic"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="@dimen/main_textSize"
+                 android:textColor="@color/black"
+                 android:inputType="number"
+                 />
+         </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/Diastolic_rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Systolic_rela"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/Diastolic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:text="@string/diastolic"
+                    android:layout_centerVertical="true"
+                    />
+                <EditText
+                    android:id="@+id/Diastolic_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/Diastolic"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/HeartRate_rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Diastolic_rela"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/HeartRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:text="@string/heart_rate"
+                    android:layout_centerVertical="true"
+                    />
+                <EditText
+                    android:id="@+id/HeartRate_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/HeartRate"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/HeartRate_rela"
+                android:layout_marginTop="20dp"
+                >
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/on_click_button"
+                    android:text="@string/chat_save"
+                    android:textColor="@color/white"
+                    />
+
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/on_click_deletebutton"
+                    android:layout_below="@+id/saveButton"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/delete_Template"
+                    android:textColor="@color/white"
+                    />
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/radius_gary"
+                    android:layout_below="@+id/deleteButton"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

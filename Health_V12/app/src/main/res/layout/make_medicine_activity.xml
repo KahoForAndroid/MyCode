@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <include layout="@layout/top_title_include"></include>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/layout_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+
+
+    <Button
+        android:id="@+id/add_Button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/on_click_button"
+        android:text="@string/add_Template"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_below="@+id/layout_recy"
+        />
+
+
+    <Button
+        android:id="@+id/save_Button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/on_click_button"
+        android:text="@string/chat_save"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_below="@+id/add_Button"
+        />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/save_Button"
+                ></RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

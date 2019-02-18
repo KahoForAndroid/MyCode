@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <TextView
+            android:id="@+id/data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="2017/3/20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:id="@+id/pay_for_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lable_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+        <zj.health.health_v1.MyView.KahoLabelLayout
+            android:id="@+id/Label_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/lable_text"
+            ></zj.health.health_v1.MyView.KahoLabelLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Description_of_the_disease"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/main_textTitleSize"
+        />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/again_button"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            >
+            <EditText
+                android:id="@+id/content_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:layout_margin="10dp"
+                android:gravity="top"
+                android:textColor="@color/black"
+                android:textSize="@dimen/main_textSize"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/again_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/again_button"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/title_bottom_line"/>
+</LinearLayout>

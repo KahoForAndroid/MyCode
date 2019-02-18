@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/title_bottom_line"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_textTitleSize"
+        android:textColor="@color/black"
+        android:text="@string/Consultation_setting"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        />
+
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/region_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/area"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/area_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/setting_null"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/area"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <zj.health.health_v1.MyView.SwitchView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/consultingType_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/Communication_mode"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/consulting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/setting_null"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/introduction_rela"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/introduction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/introduction"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/introduction_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_below="@+id/introduction_text"
+            android:layout_margin="15dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/intput_introduction"
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/speciality_rela"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/speciality_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/speciality"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/speciality_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_below="@+id/speciality_text"
+            android:layout_margin="15dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/intput_speciality"
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:textColor="@color/black"
+            android:text="@string/Acceptable_minimum_price"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Graphic_consulting_price_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/Graphic_consulting_price"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/Graphic_consulting_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/setting_null"
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Video_consulting_price_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/Video_consulting_price"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/Video_consulting_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/setting_null"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            >
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/on_click_button"
+                android:layout_marginTop="30dp"
+                android:text="@string/chat_save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_textTitleSize"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/date_rela"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/radius_gary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="@drawable/radius_white"
+            >
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/main_textTitleSize"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@+id/down_img"
+                />
+            <ImageView
+                android:id="@+id/down_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/down_jt"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/Sport_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_blue2">
+
+            <TextView
+                android:id="@+id/Sport_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Sport"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_textTitleSize" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Rest_in_rest_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radius_black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+            <TextView
+                android:id="@+id/Rest_in_rest_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="@string/Rest_in_rest"
+                android:textSize="@dimen/main_textTitleSize"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/big_textSize"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/heart_rate_data"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/radius_gary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="@drawable/radius_white"
+            >
+            <EditText
+                android:id="@+id/heart_rate_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/main_textTitleSize"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:hint="@string/input_heart_rate_data"
+                android:background="@color/white"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/commit_Button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/on_click_button"
+        android:text="@string/commit_data"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/device_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="#999999"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/Equipment_control"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/deviceList_recy"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/device_null_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="#999999"
+                    android:layout_centerInParent="true"
+                    android:text="@string/connect_device_null"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/add_bluetooth"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/add_bluetooth"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/device_layout"
+            android:layout_marginTop="20dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

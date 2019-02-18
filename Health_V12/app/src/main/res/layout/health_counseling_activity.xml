@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:text="@string/Health_counseling"
+            />
+
+        <TextView
+            android:id="@+id/history_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="@string/history_release"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        >
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="@string/search_doctor"
+            android:textSize="@dimen/main_textSize"
+
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/dorctor_leavel"
+        />
+
+    <zj.health.health_v1.MyView.KahoLabelLayout
+        android:id="@+id/dorctor_leavel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
+        ></zj.health.health_v1.MyView.KahoLabelLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Selection_section"
+
+        />
+
+    <zj.health.health_v1.MyView.KahoLabelLayout
+        android:id="@+id/Selection_section_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        ></zj.health.health_v1.MyView.KahoLabelLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Communication_mode"
+
+        />
+
+    <zj.health.health_v1.MyView.KahoLabelLayout
+        android:id="@+id/Communication_mode_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        ></zj.health.health_v1.MyView.KahoLabelLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/area"
+            android:visibility="gone"
+            />
+
+        <zj.health.health_v1.MyView.KahoLabelLayout
+            android:id="@+id/area_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"
+
+            ></zj.health.health_v1.MyView.KahoLabelLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Description_of_the_disease"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <EditText
+            android:id="@+id/Description_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:hint="@string/Description_hint"
+            android:background="@color/white"
+            android:gravity="top"
+            android:textSize="@dimen/main_textSize"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/counseling_recy"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_below="@+id/Description_edit"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            ></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        >
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="25dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/main_textSize"
+               android:textColor="@color/main_color"
+               android:text="@string/Freight_Basis"
+               android:layout_above="@+id/money_text"
+               />
+
+           <TextView
+               android:id="@+id/money_text"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/main_textTitleSize"
+               android:textColor="@color/black"
+               android:layout_marginTop="5dp"
+               />
+       </RelativeLayout>
+
+        <TextView
+            android:id="@+id/edit_money_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="@string/edit_money"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:checked="false"
+            android:layout_centerVertical="false"
+            />
+        <TextView
+            android:id="@+id/agree_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_Smaill_textSize"
+            android:layout_toRightOf="@+id/checkbox"
+            android:text="@string/agree"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/app_authorized_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_Smaill_textSize"
+            android:layout_toRightOf="@+id/agree_text"
+            android:text="@string/app_authorized"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/on_click_button"
+        android:layout_marginTop="10dp"
+        android:text="@string/Confirmation_release"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_textTitleSize"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/white"
+            ></RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_bg"
+    android:orientation="vertical"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back"
+            />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:focusable="true"
+       android:focusableInTouchMode="true"
+       >
+       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           >
+           <ImageView
+               android:id="@+id/icon_head"
+               android:layout_width="110dp"
+               android:layout_height="110dp"
+               android:src="@drawable/icon_head"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="5dp"
+               />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:textSize="@dimen/main_textSize"
+               android:textColor="@color/tips_textColor"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_below="@+id/icon_head"
+               android:text="@string/onClick_switch_icon_head"
+               />
+       </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:orientation="horizontal"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/nickname"
+                   android:layout_gravity="center_vertical"
+                   android:textSize="@dimen/main_textSize"
+                   android:textColor="@color/black"
+                   android:layout_marginLeft="10dp"
+                   />
+               <EditText
+                   android:id="@+id/nick_name_ed"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:layout_gravity="center_vertical"
+                   android:theme="@style/MyEditText"
+                   android:textSize="@dimen/main_textSize"
+                   android:layout_marginRight="20dp"
+                   />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:orientation="horizontal"
+               android:background="@drawable/select_hospital"
+               android:layout_marginRight="5dp"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/Department"
+                   android:layout_gravity="center_vertical"
+                   android:textSize="@dimen/main_textSize"
+                   android:textColor="@color/black"
+                   android:layout_marginLeft="10dp"
+                   />
+               <TextView
+                   android:id="@+id/Department_ed"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:layout_gravity="center_vertical"
+                   android:theme="@style/MyEditText"
+                   android:textSize="@dimen/main_textSize"
+                   android:layout_marginRight="20dp"
+                   />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:orientation="horizontal"
+               android:background="@drawable/select_hospital"
+               android:layout_marginRight="5dp"
+               android:layout_marginTop="5dp"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/Job_Title"
+                   android:layout_gravity="center_vertical"
+                   android:textSize="@dimen/main_textSize"
+                   android:textColor="@color/black"
+                   android:layout_marginLeft="10dp"
+                   />
+               <TextView
+                   android:id="@+id/Job_Title_ed"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:layout_gravity="center_vertical"
+                   android:theme="@style/MyEditText"
+                   android:textSize="@dimen/main_textSize"
+                   android:layout_marginRight="20dp"
+                   />
+           </LinearLayout>
+
+       </LinearLayout>
+   </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/work_address"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/select_workaddress_btn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/select_hospital"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/commit_id_picture"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/black"
+        />
+    <ImageView
+        android:id="@+id/id_img"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/id_card"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Doctor_certificate_of_practice"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize" />
+
+        <TextView
+            android:id="@+id/Doctor_certificate_photo_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="0/3"
+            android:textColor="@color/tips_textColor"
+            android:textSize="@dimen/main_textSize"
+
+            />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Certificate_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        ></android.support.v7.widget.RecyclerView>
+
+
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/on_click_button"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/Submission_of_audit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_textTitleSize"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"></RelativeLayout>
+</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

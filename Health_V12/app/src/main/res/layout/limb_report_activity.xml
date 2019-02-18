@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/body_bg"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:text="@string/Vertebra"
+            />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/top"
+        android:background="#4A708B"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:text="@string/report_tips"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/img_rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_marginLeftPercent="15%"
+        app:layout_marginTopPercent="30%"
+        app:layout_marginRightPercent="15%"
+        app:layout_marginBottomPercent="20%"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/limbs" />
+
+    </RelativeLayout>
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/shoulder_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="5.5%"
+        app:layout_marginTopPercent="33%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/shoulder"
+        />
+
+
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/joint_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="6%"
+        app:layout_marginTopPercent="51%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/joint"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/muscle_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="82%"
+        app:layout_marginTopPercent="34%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/muscle"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/Bone_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="78%"
+        app:layout_marginTopPercent="45.5%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/Bone"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/skin_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="77%"
+        app:layout_marginTopPercent="58%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/skin"
+        />
+
+    <Button
+        android:id="@+id/commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/on_click_button"
+        android:text="@string/commit_report"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_textTitleSize"
+        app:layout_marginLeftPercent="20%"
+        app:layout_marginRightPercent="20%"
+        app:layout_marginTopPercent="85%"
+        />
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/title_bottom_line"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <ImageView
+            android:id="@+id/drug_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/drug"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/drug_img"
+            android:layout_marginLeft="15dp"
+            >
+
+          <RelativeLayout
+              android:id="@+id/drug_name_rela"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:id="@+id/drugname"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/main_textSize"
+                  android:textColor="@color/black"
+                  android:text="@string/Drug_name2"
+                  />
+
+              <TextView
+                  android:id="@+id/drugname_text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/main_textSize"
+                  android:textColor="@color/black"
+                  android:layout_toRightOf="@+id/drugname"
+                  android:layout_marginLeft="5dp"
+                  />
+          </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/meal_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drug_name_rela"
+                android:layout_marginTop="5dp"
+                >
+            <TextView
+                android:id="@+id/meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                android:text="@string/meal_or_Postprandial"
+                />
+
+            <TextView
+                android:id="@+id/meal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@+id/meal"
+                android:layout_toRightOf="@+id/meal"
+                android:layout_marginLeft="5dp"
+                />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/drug_much_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/meal_rela"
+                android:layout_marginTop="5dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/drug_much"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:text="@string/dose2"
+                    />
+
+
+                <TextView
+                    android:id="@+id/drug_much_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/drug_much"
+                    android:layout_marginLeft="5dp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/drug_time_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drug_much_rela"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/drugtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:text="@string/Times_of_taking_medicine2"
+                    />
+
+                <TextView
+                    android:id="@+id/drugtime_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/drugtime"
+                    android:layout_marginLeft="5dp"
+                    />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/take_drug_img"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:src="@drawable/take_drug_img"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/take_drug_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textSize"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:text="@string/un_take_drug"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

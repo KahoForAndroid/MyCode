@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="CalendarView_currentDay_bg_DashPath">
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+    </array>
+    <array name="Selection_section">
+        <item>任意</item>
+        <item>内科</item>
+        <item>外科</item>
+        <item>妇产科</item>
+        <item>心理科</item>
+    </array>
+
+    <array name="dorctor_leavel">
+        <item>任意</item>
+        <item>医师</item>
+        <item>主治医师</item>
+        <item>副主任医师</item>
+        <item>主任医师</item>
+    </array>
+
+    <array name="Communication_mode">
+        <item>任意</item>
+        <item>视频咨询</item>
+        <item>图文咨询</item>
+    </array>
+
+    <array name="address">
+        <item>不限</item>
+        <item>珠海</item>
+        <item>其他</item>
+    </array>
+
+    <array name="body_type">
+    <item>血压</item>
+    <item>体重</item>
+    <item>体温</item>
+    <item>心率</item>
+    <item>血糖</item>
+</array>
+
+    <array name="log_body_type">
+        <item>概况</item>
+        <item>血压</item>
+        <item>体重</item>
+        <item>体温</item>
+        <item>心率</item>
+        <item>血糖</item>
+    </array>
+
+
+    <array name="month">
+    <item>1月</item>
+    <item>2月</item>
+    <item>3月</item>
+    <item>4月</item>
+    <item>5月</item>
+    <item>6月</item>
+    <item>7月</item>
+    <item>8月</item>
+    <item>9月</item>
+    <item>10月</item>
+    <item>11月</item>
+    <item>12月</item>
+</array>
+
+
+    <array name="month2">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </array>
+
+
+    <array name="hour">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </array>
+
+    <array name="month1">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12</item>
+    </array>
+
+    <array name="binding_question">
+        <item>您父亲的名字</item>
+        <item>您母亲的名字</item>
+        <item>您儿子的名字</item>
+        <item>您爱人的名字</item>
+        <item>您的出生日期</item>
+    </array>
+
+    <array name="much_forday">
+        <item>一日一次</item>
+        <item>一日二次</item>
+        <item>一日三次</item>
+        <item>一日四次</item>
+    </array>
+
+
+    <array name="much_forday_toMeasurement">
+        <item>一日一次</item>
+        <item>一日二次</item>
+        <item>一日三次</item>
+    </array>
+
+
+    <array name="Measurement_type_array">
+        <item>血糖</item>
+        <item>血压</item>
+        <item>心率</item>
+        <item>体重</item>
+
+    </array>
+
+    <array name="durg_much">
+        <item>四分之一</item>
+        <item>三分之一</item>
+        <item>二分之一</item>
+        <item>一</item>
+        <item>两</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </array>
+
+    <array name="durg_Company">
+        <item>瓶</item>
+        <item>片</item>
+        <item>颗</item>
+    </array>
+
+    <array name="repeat_days">
+        <item>一天</item>
+        <item>三天</item>
+        <item>一周</item>
+        <item>三十天</item>
+    </array>
+    <array name="week_days">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </array>
+
+    <array name="weeks">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </array>
+    
+    <array name="sport_array">
+        <item>从不</item>
+        <item>较少</item>
+        <item>经常</item>、
+        <item>专业</item>
+    </array>
+
+    <array name="live_array">
+        <item>在校</item>
+        <item>在职</item>
+        <item>居家</item>
+    </array>
+    
+    <array name="sport_frequency">
+        <item>每天</item>
+        <item>两天一次</item>
+        <item>三天一次</item>
+        <item>四天一次</item>
+        <item>五天一次</item>
+    </array>
+
+
+    <array name="place">
+        <item>15</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </array>
+
+    <array name="share">
+        <item>分享给朋友</item>
+        <item>分享到朋友圈</item>
+    </array>
+
+    <array name="takeTime">
+        <item>餐前</item>
+        <item>餐后</item>
+    </array>
+
+    <array name="dosage">
+        <item>四分之一</item>
+        <item>三分之一</item>
+        <item>二分之一</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </array>
+
+    <array name="dosageUnit">
+        <item>瓶</item>
+        <item>片</item>
+        <item>颗</item>
+
+    </array>
+
+    <array name="treatment">
+        <item>一天</item>
+        <item>三天</item>
+        <item>一周</item>
+        <item>三十天</item>
+
+    </array>
+
+    <array name="intervalMode">
+        <item>日</item>
+        <item>周</item>
+        <item>年</item>
+    </array>
+
+
+
+
+</resources>

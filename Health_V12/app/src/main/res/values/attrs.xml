@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CalendarView">
+        <!--这四个颜色分别是月份、星期、日期、任务的背景色，只是方便调试测量时使用，正式试用时可配置透明色-->
+        <attr name="mBgMonth" format="color" />
+        <attr name="mBgWeek" format="color" />
+        <attr name="mBgDay" format="color" />
+        <attr name="mBgPre" format="color" />
+
+        <attr name="mTextColorMonth" format="color" />           <!--标题字体颜色-->
+        <attr name="mTextColorWeek" format="color" />            <!--星期字体颜色-->
+        <attr name="mSelectWeekTextColor" format="color" />      <!--当前星期字体颜色-->
+        <attr name="mTextColorDay" format="color" />             <!--日期字体颜色-->
+        <attr name="mTextColorPreFinish" format="color" />       <!--任务次数字体颜色-->
+        <attr name="mTextColorPreUnFinish" format="color" />
+        <attr name="mTextColorPreNull" format="color" />
+
+        <attr name="mTextSizeMonth" format="dimension" />        <!--标题字体大小-->
+        <attr name="mTextSizeWeek" format="dimension" />         <!--星期字体大小-->
+        <attr name="mTextSizeDay" format="dimension" />          <!--日期字体大小-->
+        <attr name="mTextSizePre" format="dimension" />          <!--任务次数字体大小-->
+
+        <attr name="mMonthRowL" format="reference" />            <!--月份箭头-->
+        <attr name="mMonthRowR" format="reference" />            <!--月份箭头-->
+        <attr name="mMonthRowSpac" format="dimension" />
+
+        <attr name="todayColor" format="color" />                  <!--今天日期字体颜色-->
+        <attr name="mSelectTextColor" format="color" />          <!--选中日期字体颜色-->
+        <attr name="mSelectBg" format="color" />                 <!--选中日期背景-->
+        <attr name="mSelectRadius" format="dimension" />         <!--选中日期背景半径-->
+        <attr name="mCurrentBg" format="color" />                <!--当天日期背景-->
+        <attr name="mCurrentBgStrokeWidth" format="dimension" /> <!--当天日期背景虚线宽度-->
+        <attr name="mCurrentBgDashPath" format="reference" />    <!--当天日期背景虚线数组-->
+
+        <attr name="mMonthSpac" format="dimension" />            <!--标题月份上下间隔-->
+        <attr name="mLineSpac" format="dimension" />             <!--日期行间距-->
+        <attr name="mTextSpac" format="dimension" />             <!--日期和任务次数字体上下间距-->
+    </declare-styleable>
+
+
+
+    <!-- 条形控制控件自定义属性 -->
+    <declare-styleable name="LineControllerView">
+        <!-- 名称 -->
+        <attr name="name" format="string"/>
+        <!-- 内容或当前状态 -->
+        <attr name="content" format="string"/>
+        <!-- 是否是列表中最后一个 -->
+        <attr name="isBottom" format="boolean"/>
+        <!-- 是否可以跳转 -->
+        <attr name="canNav" format="boolean"/>
+        <!-- 是否是开关 -->
+        <attr name="isSwitch" format="boolean"/>
+    </declare-styleable>
+
+
+    <!-- 标题模板自定义属性 -->
+    <declare-styleable name="TemplateTitle">
+        <!-- 标题文案 -->
+        <attr name="titleText" format="string"/>
+        <!-- 是否有back按钮 -->
+        <attr name="canBack" format="boolean"/>
+        <!-- back按钮文案 -->
+        <attr name="backText" format="string"/>
+        <!-- 右侧更多功能按钮图片 -->
+        <attr name="moreImg" format="reference"/>
+        <!-- 右侧更多功能按钮文字 -->
+        <attr name="moreText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RatingBarView">
+
+        <attr name="starImageSize" format="dimension"/>
+        <attr name="starCount" format="integer"/>
+        <attr name="starEmpty" format="reference"/>
+        <attr name="starFill" format="reference"/>
+
+    </declare-styleable>
+
+
+
+</resources>

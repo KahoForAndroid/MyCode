@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/date_rela"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/radius_gary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="@drawable/radius_white"
+            >
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/main_textTitleSize"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@+id/down_img"
+                />
+            <ImageView
+                android:id="@+id/down_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/down_jt"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/meal_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_blue2">
+
+            <TextView
+                android:id="@+id/meal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/meal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_textTitleSize" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Postprandial_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radius_black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+            <TextView
+                android:id="@+id/Postprandial_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="@string/Postprandial"
+                android:textSize="@dimen/main_textTitleSize"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/big_textSize"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/weight_data"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/radius_gary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="@drawable/radius_white"
+            >
+            <EditText
+                android:id="@+id/weight_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/main_textTitleSize"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:hint="@string/input_weight"
+                android:background="@color/white"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/commit_Button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/on_click_button"
+        android:text="@string/commit_data"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/add_bluetooth"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/add_bluetooth"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="60dp"
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>

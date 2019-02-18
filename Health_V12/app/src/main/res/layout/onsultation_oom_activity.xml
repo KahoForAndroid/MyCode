@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@string/doctor_Visit"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back"
+            />
+
+        <ImageView
+            android:id="@+id/wallet"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/wallet_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_bottom_line"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:id="@+id/Patient_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:id="@+id/doctor_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/family_doctor"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textTitleSize"
+                android:text="@string/my_Patient"
+                android:textColor="@color/black"
+                android:layout_below="@+id/doctor_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/title_bottom_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bbs_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/Health_counseling_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/doctor_icon"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textTitleSize"
+                android:text="@string/Doctor_bbs"
+                android:textColor="@color/black"
+                android:layout_below="@+id/Health_counseling_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/title_bottom_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/prescription_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/prescription_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/prescription"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textTitleSize"
+                android:text="@string/Prescription_management"
+                android:textColor="@color/black"
+                android:layout_below="@+id/prescription_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/history_im_rela"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/im_history_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/im_history_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/history_im_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_im_text"
+            android:layout_toRightOf="@+id/im_history_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ededed"
+            android:layout_toRightOf="@+id/im_history_icon"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/user_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/list_null_rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/list_null"
+            />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

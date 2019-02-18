@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    >
+    <RelativeLayout
+        android:id="@+id/delete_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <Button
+            android:id="@+id/delete_Button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/on_click_deletebutton"
+            android:text="@string/delete_Template"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/drug_name_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/Drug_name"
+            />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+        <TextView
+            android:id="@+id/drug_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:text="@string/please_input"
+            android:layout_toLeftOf="@+id/img_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/much_medicine_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/much_of_taking_medicine"
+            />
+
+        <ImageView
+            android:id="@+id/img_right2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+        <TextView
+            android:id="@+id/drug_Takemuch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_toLeftOf="@+id/img_right2"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/take_durg_time_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:id="@+id/Times_of_taking_medicine_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/Times_of_taking_medicine"
+            />
+
+        <TextView
+            android:id="@+id/Postprandial_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/Postprandial"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/main_textSize"
+            />
+
+        <ImageView
+            android:id="@+id/circle_img2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/circle_hollow"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/Postprandial_text"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/meal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/meal"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/main_textSize"
+            android:layout_toLeftOf="@+id/circle_img2"
+            />
+
+        <ImageView
+            android:id="@+id/circle_img1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/circle_tick"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/meal_text"
+            android:layout_marginRight="10dp"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/dose_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/dose"
+            />
+
+
+        <TextView
+            android:id="@+id/dose_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/img_right5"
+            android:text="@string/selected"
+            />
+
+        <ImageView
+            android:id="@+id/img_right5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Course_of_treatment_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/Course_of_treatment"
+            />
+
+        <ImageView
+            android:id="@+id/img_right3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+        <TextView
+            android:id="@+id/Course_of_treatment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_toLeftOf="@+id/img_right3"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/startDate_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/startDate"
+            />
+
+
+        <TextView
+            android:id="@+id/startDate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#999999"/>
+
+
+</LinearLayout>

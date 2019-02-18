@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/item_rela"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        >
+        <ImageView
+            android:id="@+id/doctorIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/icon_head"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/doctorIcon"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textTitleSize"
+                    android:textColor="@color/black"
+                    android:text="asas"
+                    />
+
+                <TextView
+                    android:id="@+id/doctor_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/nick_name"
+                    android:layout_alignBottom="@+id/nick_name"
+                    android:text="aaaa"
+                    />
+            </RelativeLayout>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="15dp"
+                android:minHeight="10dp"
+                android:rating="0"
+                android:stepSize="0.5"
+                android:isIndicator="true"
+                style="@style/RadingStyle"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/main_textSize"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/counseling_rela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            >
+        <ImageView
+            android:id="@+id/counseling_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/circle_img"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/white"
+                android:text="@string/counsel"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/counseling_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/counseling_rela"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:text="@string/counseling"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

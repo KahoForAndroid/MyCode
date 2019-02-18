@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/day_one_rela"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+            <TextView
+                android:id="@+id/day_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/day_two_rela"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            >
+            <TextView
+                android:id="@+id/day_two_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/day_three_rela"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            >
+            <TextView
+                android:id="@+id/day_three_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/day_four_rela"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            >
+            <TextView
+                android:id="@+id/day_four_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/day_five_rela"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            >
+            <TextView
+                android:id="@+id/day_five_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/cancel_rela"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/main_textSize"
+                android:textColor="@color/black"
+                android:text="@string/cencel"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <RelativeLayout
+        android:id="@+id/delete_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <Button
+            android:id="@+id/delete_Button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/on_click_deletebutton"
+            android:text="@string/delete_Template"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sport_type_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/sport_type"
+            />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+        <TextView
+            android:id="@+id/sport_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:text="@string/please_input"
+            android:layout_toLeftOf="@+id/img_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Remarks_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:id="@+id/remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/Remarks"
+            />
+
+
+        <EditText
+            android:id="@+id/Remarks_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/remark"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="@string/please_input"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/sport_mode"
+            />
+
+        <TextView
+            android:id="@+id/Postprandial_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/by_week"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/main_textSize"
+            />
+
+        <ImageView
+            android:id="@+id/circle_img2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/circle_hollow"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/Postprandial_text"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/meal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/by_day"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/main_textSize"
+            android:layout_toLeftOf="@+id/circle_img2"
+            />
+
+        <ImageView
+            android:id="@+id/circle_img1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/circle_tick"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/meal_text"
+            android:layout_marginRight="10dp"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/sport_mode_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/sport_mode"
+            />
+
+        <ImageView
+            android:id="@+id/img_right2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/sport_mode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/startDate_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/startDate"
+            />
+
+        <ImageView
+            android:id="@+id/img_right3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/startDate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/endDate_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/end_date"
+            />
+
+
+        <TextView
+            android:id="@+id/endDate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

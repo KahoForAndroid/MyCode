@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:openxu="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/top_title_include"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+
+    <zj.health.health_v1.MyView.CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        openxu:mMonthRowL="@drawable/return_left"
+        openxu:mMonthRowR="@drawable/return_right"
+        openxu:mMonthRowSpac="20dip"
+        openxu:mTextSizeMonth="20sp"
+        openxu:mTextSizeWeek="17sp"
+        openxu:mTextSizeDay="17sp"
+        openxu:mTextSizePre="10sp"
+        openxu:mBgWeek="#ededed"
+        openxu:mTextColorMonth="#4b4b4b"
+        openxu:mTextColorWeek="#686768"
+        openxu:mSelectWeekTextColor="#f67633"
+        openxu:mTextColorDay="#9e9e9d"
+        openxu:mTextColorPreFinish="#fc7451"
+        openxu:mTextColorPreUnFinish="#60ba8d"
+        openxu:mTextColorPreNull="#cecdcd"
+        openxu:mSelectTextColor="#686768"
+        openxu:todayColor="#ff0000"
+        openxu:mMonthSpac="10dip"
+        openxu:mLineSpac="12dip"
+        openxu:mTextSpac="8dip"
+
+        openxu:mCurrentBg="#6E6E6E"
+        openxu:mCurrentBgStrokeWidth="1.5dip"
+        openxu:mCurrentBgDashPath="@array/CalendarView_currentDay_bg_DashPath"
+        openxu:mSelectBg="@color/main_color"
+        openxu:mSelectRadius="15dip"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#ededed"
+        ></RelativeLayout>
+    <LinearLayout
+        android:id="@+id/take_medicine_lin"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <RelativeLayout
+            android:id="@+id/take_medicine_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/add_reminder_button"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/measurement_schedule_rela"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+            <!--<ImageView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:src="@drawable/take_medicine_organge"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--/>-->
+        <!--</RelativeLayout>-->
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/exercise_schedule_rela"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+            <!--<ImageView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:src="@drawable/take_medicine_blue_btn"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--/>-->
+        <!--</RelativeLayout>-->
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ededed"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/calendar_recy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            ></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

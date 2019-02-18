@@ -1,0 +1,179 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "zj.health.health_v1"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("E:\\zj_key\\app_key.jks")
+            storePassword "zhzj888888"
+            keyAlias "app"
+            keyPassword "zhzj888888"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    apply plugin: 'org.greenrobot.greendao'
+    greendao {
+        schemaVersion 1
+        daoPackage 'GreenDaoDB'
+        //设置DaoMaster、DaoSession、Dao目录
+        targetGenDir 'src/main/java'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            ndk {
+                // 需要将 x86 架构过滤掉
+                abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+            }
+        }
+
+        debug {
+
+            ndk {
+                // 需要将 x86 架构过滤掉
+                abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+            }
+        }
+    }
+
+    packagingOptions{
+        exclude '*.apk'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/INDEX.LIST'
+    }
+    dexOptions {
+        jumboMode true
+//        incremental false
+    }
+    lintOptions{
+        abortOnError false
+    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
+
+
+}
+
+//MobSDK {
+//    appKey "27f51e1c06a10"
+//    appSecret "4c942129869959cabb9cbe45152bdccf"
+//    gui false
+//    ShareSDK {
+//        devInfo {
+//
+//            SinaWeibo{
+//            Id="1"
+//            SortId="1"
+//            AppKey="568898243"
+//            AppSecret="38a4f8204cc784f81f9f0daaf31e02e3"
+//            RedirectUrl="http://www.sharesdk.cn"
+//            ShareByAppClient="true"
+//            Enable="true" }
+////            /* Wechat微信和WechatMoments微信朋友圈的appid是一样的；
+////      注意：开发者不能用我们这两个平台的appid,否则分享不了
+////      微信测试的时候，微信测试需要先签名打包出apk,
+////      sample测试微信，要先签名打包，keystore在sample项目中，密码123456
+////      BypassApproval是绕过审核的标记，设置为true后AppId将被忽略，故不经过
+////      审核的应用也可以执行分享，但是仅限于分享文字和图片，不能分享其他类型，
+////      默认值为false。此外，微信收藏不支持此字段。wx4868b35061f87885
+////      <!--要分享微信小应用程序时用userName,path-->*/
+////            Wechat {
+////                id 1
+////                sortId 1
+////                appId "wx4868b35061f87885"
+////                appSecret "64020361b8ec4c99936c0e3999a9f249"
+////                userName "gh_afb25ac019c9"
+////                path "pages/index/index.html?id=1"
+////                withShareTicket true
+////                miniprogramType 0
+////                bypassApproval false
+////                enable true
+////            }
+////
+////            WechatMoments {
+////                id 2
+////                sortId 2
+////                appId "wx4868b35061f87885"
+////                appSecret "64020361b8ec4c99936c0e3999a9f249"
+////                bypassApproval false
+////                enable true
+////            }
+////
+////            WechatFavorite {
+////                id 3
+////                sortId 3
+////                appId "wx4868b35061f87885"
+////                appSecret "64020361b8ec4c99936c0e3999a9f249"
+////                bypassApproval false
+////                enable true
+////            }
+//
+//        }
+//    }
+//
+//}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    //    compile 'com.android.support:support-v4:23.4.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    compile 'com.meizu.flyme.internet:push-internal:3.6.3@aar'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile files('libs/zxing.jar')
+    // compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    //    implementation files('libs/ShareSDK-Wechat-3.1.2.jar')
+    //    implementation files('libs/ShareSDK-Wechat-Core-3.1.2.jar')
+    //    implementation files('libs/ShareSDK-Wechat-Favorite-3.1.2.jar')
+    //    implementation files('libs/ShareSDK-Wechat-Moments-3.1.2.jar')
+    //    implementation files('libs/xutils-3.3.44.jar')
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation project(':presentation')
+    implementation project(':tlslibrary')
+    implementation project(':sdk')
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation 'com.contrarywind:Android-PickerView:3.2.7'
+    implementation 'com.android.support:percent:26.0.0'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    //greendao依赖
+    implementation 'org.greenrobot:greendao:3.2.0'
+    implementation 'net.zetetic:android-database-sqlcipher:3.5.7@aar'
+    compileOnly 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    //依赖STOMP协议的Android实现
+    compile 'com.github.NaikSoftware:StompProtocolAndroid:1.1.1'
+    //StompProtocolAndroid 依赖于webSocket的标准实现
+    compile 'org.java-websocket:Java-WebSocket:1.3.0'
+//    compile 'com.github.chrisbanes:PhotoView:2.1.3'
+}

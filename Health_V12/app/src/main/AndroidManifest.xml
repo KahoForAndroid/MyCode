@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="1"
+    android:versionName="1.01"
+    package="zj.health.health_v1">
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 屏幕唤醒 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 屏幕熄灭 -->
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+
+    <uses-feature
+    android:name="android.hardware.bluetooth_le"
+    android:required="true" />
+
+
+
+    <!--腾讯云-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- mi push -->
+    <permission
+        android:name="com.tencent.qcloud.timchat.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.tencent.qcloud.timchat.permission.MIPUSH_RECEIVE" />
+
+
+
+    <!--mz push-->
+    <!-- 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息-->
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE"></uses-permission>
+    <permission android:name="com.tencent.qcloud.timchat.push.permission.MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.tencent.qcloud.timchat.push.permission.MESSAGE"></uses-permission>
+
+    <!--  兼容flyme3.0配置权限-->
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+    <permission android:name="com.tencent.qcloud.timchat.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"></permission>
+    <uses-permission android:name="com.tencent.qcloud.timchat.permission.C2D_MESSAGE"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+
+    <application
+        android:name=".Base.Health_AppLocation"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="android:theme"
+        android:networkSecurityConfig="@xml/network_security_config"
+        >
+
+
+        <activity android:name=".IM.ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--登录页面-->
+        <activity android:name=".Activity.Login_Activity"
+            android:launchMode="singleTask"
+            />
+        <!--注册首页面-->
+        <activity android:name=".Activity.New_register_Activity"
+            />
+        <!--注册填写密保页面-->
+        <activity android:name=".Activity.Register_Security_Activity"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!--注册设置个人头像资料页面-->
+        <activity android:name=".Activity.Register_SettingData_Activity"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!--注册医生提交资格证书页面-->
+        <activity android:name=".Activity.Commit_DoctorData_Activity"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!--主功能页面-->
+        <activity android:name=".Activity.MainsActivity"
+            />
+        <!--等待审核页面-->
+        <activity android:name=".Activity.Wait_for_audit_Activity"/>
+        <!-- 提醒日历页面-->
+        <activity android:name=".Activity.Remind_Calendar_Activity"/>
+        <!--个人信息页面-->
+        <activity android:name=".Activity.My_Activity"/>
+        <!--我的钱包页面-->
+        <activity android:name=".Activity.My_Wallet_Activity"/>
+        <!--设置与声明页面-->
+        <activity android:name=".Activity.Setting_Activity"/>
+        <!--医生服务页面-->
+        <activity android:name=".Activity.Doctor_service_Activity"
+            />
+        <!--IM测试页面-->
+        <activity android:name=".Activity.IM_Test_Activity"/>
+        <!--我的药房页面-->
+        <activity android:name=".Activity.Prescription_Activity"/>
+        <!--健康咨询页面-->
+        <activity android:name=".Activity.Health_counseling_Activity" />
+        <!--进入诊室页面-->
+        <activity android:name=".Activity.Consultation_Room_Activity" />
+        <!--我的患者页面-->
+        <activity android:name=".Activity.My_Patient_Activity" />
+        <!--医生论坛页面-->
+        <activity android:name=".Activity.Doctor_bbs_Activity" />
+        <!--药方管理页面-->
+        <activity android:name=".Activity.Prescription_Manage_Activity" />
+        <!--健康日志页面-->
+        <activity android:name=".Activity.Health_Log_Activity" />
+        <!--数据录入页面-->
+        <activity android:name=".Activity.BlueTooth_Data_Activity"
+            android:windowSoftInputMode="adjustResize"
+            />
+        <!--亲友日志页面-->
+        <activity android:name=".Activity.Friend_Log_Activity" />
+        <!--新的亲友页面-->
+        <activity android:name=".Activity.New_Friend_Message_Activity" />
+        <!--亲友权限修改页面-->
+        <activity android:name=".Activity.Friend_permissions_setting_Activity" />
+        <!--添加亲友页面-->
+        <activity android:name=".Activity.Add_Friends_Activity" />
+        <!--爱心医生页面-->
+        <activity android:name=".Activity.Free_doctor_List_Activity" />
+        <!--设备管理页面-->
+        <!--<activity android:name=".Activity.BlueTooth_Data_Activity_Setting"/>-->
+        <!--体验报告页面-->
+        <activity android:name=".Activity.Medical_Examination_Report_Activity"/>
+        <!--健康报告页面-->
+        <activity android:name=".Activity.Health_Report_Activity"/>
+        <!--手机通讯录页面-->
+        <activity android:name=".Activity.Add_address_list_Activity"/>
+        <!--专项体检-->
+        <activity android:name=".Activity.Special_Report_Activity"/>
+        <!--头部体检页面-->
+        <activity android:name=".Activity.Head_Report_Activity"/>
+        <!--脊椎体检页面-->
+        <activity android:name=".Activity.Vertebra_Activity"/>
+        <!--四肢体检页面-->
+        <activity android:name=".Activity.Limb_Report_Activity"/>
+        <!--身体/体液体检页面-->
+        <activity android:name=".Activity.Body_Fluid_Activity"/>
+        <!--体检报告数据提交页面-->
+        <activity android:name=".Activity.Special_Report_commit_Activity"/>
+        <!--更改绑定(输入原手机号码)页面-->
+        <activity android:name=".Activity.Replacement_binding_Frist_Activity"/>
+        <!--更改绑定(选择改绑方式)页面-->
+        <activity android:name=".Activity.Replacement_binding_Activity"/>
+        <!--更改绑定(输入新手机号)页面-->
+        <activity android:name=".Activity.Replacement_binding_Last_Activity"/>
+        <!--更改绑定(更绑成功)页面-->
+        <activity android:name=".Activity.Replacement_binding_Finish_Activity"/>
+        <!-- 药物建议详情页面 -->
+        <activity android:name=".Activity.Prescription_Item_Details_Activity"/>
+        <!-- 健康咨询历史发布页面 -->
+        <activity android:name=".Activity.Historical_Release_Activity"/>
+        <!-- 消息通知页面 -->
+        <activity android:name=".Activity.Message_Notice_Setting_Activity"/>
+        <!-- 个人详情页面 -->
+        <activity android:name=".Activity.Personal_details_Activity"/>
+        <!-- 上传通讯录页面 -->
+        <activity android:name=".Activity.Commit_Contacts_Activity"/>
+        <!-- 医生收入页面 -->
+        <activity android:name=".Activity.My_Wallet_ForDoctor_Activity"/>
+        <!-- 報告詳情页面 -->
+        <activity android:name=".Activity.Report_defult_Activity"/>
+        <!-- 服药提醒页面 -->
+        <activity android:name=".Activity.Take_medicine_Activity"/>
+        <!--&lt;!&ndash; 测量日程页面 &ndash;&gt;-->
+        <!--<activity android:name=".Activity.Measurement_schedule_Activity"/>-->
+        <!--&lt;!&ndash; 运动日程页面 &ndash;&gt;-->
+        <!--<activity android:name=".Activity.Exercise_schedule_Activity"/>-->
+        <!-- 药物名称页面 -->
+        <activity android:name=".Activity.Drug_Name_Activity"/>
+        <!-- 搜索蓝牙设备页面 -->
+        <activity android:name=".Activity.Search_BlueToothDevice_Activity"/>
+        <!-- 提醒功能添加药物名页面 -->
+        <activity android:name=".Activity.Add_drug_for_calendar_Activity"/>
+        <!-- 选择重复提醒页面 -->
+        <activity android:name=".Activity.Calendar_Take_medicine_repeat_Activity"/>
+        <!-- 选择星期页面 -->
+        <activity android:name=".Activity.Take_Measurement_Week_Activity"/>
+        <!--普通蓝牙设备搜索页面-->
+        <activity android:name=".Activity.NewSearch_BlueTooth_Activity"/>
+        <!--好友搜索结果界面-->
+        <activity android:name=".Activity.Friends_Activity"/>
+        <!--已邀请咨询的医生列表-->
+        <activity android:name=".Activity.Counselling_list_Activity"/>
+        <!--用户个人信息页-->
+        <activity android:name=".Activity.UserMessage_Activity"/>
+        <!--疾病列表页-->
+        <activity android:name=".Activity.Drug_List_Activity"/>
+        <!--患者信息页-->
+        <activity android:name=".Activity.Patient_information_Activity"/>
+        <!--医生查看用户报告页-->
+        <activity android:name=".Activity.IM_Check_Report_Activity"/>
+        <!--医生查看用户报告详细-->
+        <activity android:name=".Activity.IM_Report_defult_Activity"/>
+        <!--用户选择发送报告页面-->
+        <activity android:name=".Activity.IM_Select_Report_Activity"/>
+        <!--补充医生注册资料页面-->
+        <activity android:name=".Activity.RegisterDoctor_Supplement_Activity"/>
+        <!--历史IM沟通记录页面-->
+        <activity android:name=".Activity.History_IM_Activity"/>
+        <!--普通户名药物建议详情页面-->
+        <activity android:name=".Activity.PrescriptionUsers_Item_Details_Activity"/>
+        <!--医生选择报告发送页面-->
+        <activity android:name=".Activity.IM_Send_DrugtoUsers_Activity"/>
+        <!--查看图片页面-->
+        <activity android:name=".Activity.CheckPhotoActivity"/>
+        <!--支付页面-->
+        <activity android:name=".Activity.PayActivity"/>
+        <!--查看亲友图表数据页面-->
+        <activity android:name=".Activity.Friend_Graph_Activity"/>
+        <!--查看医生信息-->
+        <activity android:name=".Activity.IM_Doctor_introduce_Activity"/>
+        <!--1像素保活页面-->
+        <activity android:name=".Activity.OnePiexlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OnePixelActivity"
+            />
+        <!--查看亲友数据选项页面-->
+        <activity android:name=".Activity.CheckFriendData_Activity"
+            android:screenOrientation="portrait"
+            />
+        <!--&lt;!&ndash;微信支付回调页面&ndash;&gt;-->
+        <!--<activity android:name=".wxapi.WXPayEntryActivity"-->
+            <!--android:exported="true"-->
+            <!--/>-->
+        <!--&lt;!&ndash;微信支付回调页面&ndash;&gt;-->
+        <!--<activity android:name="zj.health.health_v1.wxapi.testActivity"-->
+            <!--android:exported="true"-->
+            <!--/>-->
+
+
+        <!-- 药物提醒-->
+        <receiver android:name=".Broadcast.RemindReceiver"
+            >
+            <intent-filter>
+                <action android:name="calendar"></action>
+            </intent-filter>
+        </receiver>
+
+
+        <!-- 药物提醒-->
+        <receiver android:name=".Broadcast.ClockReceiver"
+            >
+            <intent-filter>
+                <action android:name="reminder"></action>
+            </intent-filter>
+        </receiver>
+
+        <!-- 后台推送通知-->
+        <receiver android:name=".Broadcast.PushReceiver"
+            >
+            <intent-filter>
+                <action android:name="pushConsult"></action>
+                <action android:name="pushConsultUsers"></action>
+            </intent-filter>
+        </receiver>
+
+        <!-- 蓝牙连接状态广播-->
+        <receiver android:name=".Broadcast.DeviceStatusBroadCast"
+        >
+        <intent-filter>
+            <action android:name="com.example.bluetooth.le.ACTION_GATT_CONNECTED"></action>
+            <action android:name="com.example.bluetooth.le.ACTION_GATT_DISCONNECTED"></action>
+            <action android:name="com.example.bluetooth.le.ACTION_GATT_SERVICES_DISCOVERED"></action>
+        </intent-filter>
+    </receiver>
+
+
+        <!--&lt;!&ndash; 1像素保活广播监听&ndash;&gt;-->
+        <!--<receiver android:name=".Broadcast.OnePixelReceiver"-->
+            <!--&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
+                <!--<action android:name="android.intent.action.SCREEN_ON"></action>-->
+                <!--<action android:name="android.intent.action.USER_PRESENT"></action>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+
+        <!-- 蓝牙发送数据广播-->
+        <receiver android:name=".Broadcast.DeviceBroadCast"
+            >
+            <intent-filter>
+                <action android:name="sendData"></action>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".Service.AlarmManageService"
+            android:label="@string/app_name"
+            />
+        <service android:name=".Service.DeviceService"
+            android:priority="1000"
+            android:label="设备服务"
+            />
+        <service android:name=".Service.WebScoketService"
+            android:priority="1000"
+            android:label="设备服务"
+            />
+
+
+
+
+
+
+
+
+
+
+        <!--腾讯云部分-->
+        <meta-data android:name="com.tencent.rdm.uuid" android:value="e9fd6241-45e0-400b-9953-1b4ccc690825" />
+        <!--<activity android:name=".IM.ui.SplashActivity"-->
+            <!--android:screenOrientation="portrait">-->
+            <!--&lt;!&ndash;<intent-filter>&ndash;&gt;-->
+            <!--&lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+            <!--&lt;!&ndash;</intent-filter>&ndash;&gt;-->
+        <!--</activity>-->
+        <activity android:name=".IM.ui.HomeActivity" />
+        <activity
+            android:name=".IM.ui.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".IM.ui.SearchFriendActivity" />
+        <activity android:name=".IM.ui.AddFriendActivity" />
+        <activity
+            android:name=".IM.ui.ProfileActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".IM.ui.ManageFriendGroupActivity" />
+        <activity android:name=".IM.ui.VideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".IM.ui.CreateGroupActivity" />
+        <activity android:name=".IM.ui.TCVideoRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".IM.ui.TCVideoPreviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".IM.ui.GroupProfileActivity"
+            android:launchMode="singleTask" />
+
+        <!-- 消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+        <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.service.TASK_REMOVED" />
+            </intent-filter>
+        </receiver>
+
+        <!--&lt;!&ndash; mipush &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="com.xiaomi.push.service.XMJobService"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false"-->
+            <!--android:permission="android.permission.BIND_JOB_SERVICE"-->
+            <!--android:process=":MiPushService" />-->
+        <!--<service-->
+            <!--android:name="com.xiaomi.push.service.XMPushService"-->
+            <!--android:enabled="true"-->
+            <!--android:process=":MiPushService" />-->
+        <!--<service-->
+            <!--android:name="com.xiaomi.mipush.sdk.PushMessageHandler"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true" />-->
+        <!--<service-->
+            <!--android:name="com.xiaomi.mipush.sdk.MessageHandleService"-->
+            <!--android:enabled="true" />-->
+
+        <!--<receiver-->
+            <!--android:name=".IM.utils.MiPushMessageReceiver"-->
+            <!--android:exported="true">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.xiaomi.mipush.ERROR" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver-->
+            <!--android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"-->
+            <!--android:exported="true">-->
+            <!--<intent-filter>-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver-->
+            <!--android:name="com.xiaomi.push.service.receivers.PingReceiver"-->
+            <!--android:exported="false"-->
+            <!--android:process=":MiPushService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.xiaomi.push.PING_TIMER" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!-- mipush -->
+
+
+        <!-- hwpush -->
+
+
+        <!-- 第三方相关 :接收Push消息（注册、Push消息、Push连接状态、标签，LBS上报结果）广播 -->
+        <!--<receiver android:name=".IM.utils.HwPushMessageReceiver">-->
+            <!--<intent-filter>-->
+
+                <!--&lt;!&ndash; 必须,用于接收token &ndash;&gt;-->
+                <!--<action android:name="com.huawei.android.push.intent.REGISTRATION" />-->
+                <!--&lt;!&ndash; 必须，用于接收消息 &ndash;&gt;-->
+                <!--<action android:name="com.huawei.android.push.intent.RECEIVE" />-->
+                <!--&lt;!&ndash; 可选，用于点击通知栏或通知栏上的按钮后触发onEvent回调 &ndash;&gt;-->
+                <!--<action android:name="com.huawei.android.push.intent.CLICK" />-->
+                <!--&lt;!&ndash; 可选，查看push通道是否连接，不查看则不需要 &ndash;&gt;-->
+                <!--<action android:name="com.huawei.intent.action.PUSH_STATE" />-->
+                <!--&lt;!&ndash; 可选，标签、地理位置上报回应，不上报则不需要 &ndash;&gt;-->
+                <!--<action android:name="com.huawei.android.push.plugin.RESPONSE" />-->
+            <!--</intent-filter>-->
+
+            <!--<meta-data-->
+                <!--android:name="CS_cloud_ablitity"-->
+                <!--android:value="successRateAnalytics" />-->
+        <!--</receiver>-->
+
+        <!--&lt;!&ndash;-->
+             <!--备注：Push相关的android组件需要添加到业务的AndroidManifest.xml,-->
+        	 <!--Push相关android组件运行在另外一个进程是为了防止Push服务异常而影响主业务-->
+        <!--&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash; PushSDK:PushSDK接收外部请求事件入口 &ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="com.huawei.android.pushagent.PushEventReceiver"-->
+            <!--android:process=":HwPushService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.huawei.android.push.intent.REFRESH_PUSH_CHANNEL" />-->
+                <!--<action android:name="com.huawei.intent.action.PUSH" />-->
+                <!--<action android:name="com.huawei.intent.action.PUSH_ON" />-->
+                <!--<action android:name="com.huawei.android.push.PLUGIN" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver-->
+            <!--android:name="com.huawei.android.pushagent.PushBootReceiver"-->
+            <!--android:process=":HwPushService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.huawei.android.push.intent.REGISTER" />-->
+                <!--&lt;!&ndash; <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> &ndash;&gt;-->
+            <!--</intent-filter>-->
+
+            <!--<meta-data-->
+                <!--android:name="CS_cloud_version"-->
+                <!--android:value="\u0032\u0037\u0030\u0035" />-->
+        <!--</receiver>-->
+
+        <!--&lt;!&ndash; PushSDK:Push服务 &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="com.huawei.android.pushagent.PushService"-->
+            <!--android:process=":HwPushService"/>-->
+        <!-- hwpush -->
+
+        <!-- firebase -->
+        <!--<service android:name="com.tencent.qcloud.timchat.utils.MyFirebaseInstanceIDService" android:exported="true">-->
+
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+        <!-- firebase -->
+
+
+        <!--mz push-->
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name=".IM.utils.MeizuPushMessageReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <!-- 接收unregister消息-->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+                <category android:name="com.tencent.qcloud.timchat"></category>
+            </intent-filter>
+        </receiver>
+
+
+
+        <activity android:name=".IM.ui.ImageViewActivity" />
+        <activity android:name=".IM.ui.EditActivity" />
+        <activity android:name=".IM.ui.SearchGroupActivity" />
+        <activity android:name=".IM.ui.ApplyGroupActivity" />
+        <activity android:name=".IM.ui.GroupManageMessageActivity" />
+        <activity android:name=".IM.ui.FriendshipManageMessageActivity" />
+        <activity android:name=".IM.ui.GroupListActivity" />
+        <activity android:name=".IM.ui.ChooseFriendActivity" />
+        <activity android:name=".IM.ui.GroupMemberActivity" />
+        <activity
+            android:name=".IM.ui.customview.DialogActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name=".IM.ui.GroupMemberProfileActivity" />
+        <activity android:name=".IM.ui.FriendshipHandleActivity" />
+        <activity android:name=".IM.ui.AboutActivity" />
+        <activity android:name=".IM.ui.BlackListActivity"></activity>
+        <activity android:name=".IM.ui.ImagePreviewActivity"></activity>
+        <activity android:name=".IM.ui.MessageNotifySettingActivity"></activity>
+
+
+
+        <provider android:name="android.support.v4.content.FileProvider"
+            android:authorities="zj.health.health_v1.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"
+                />
+        </provider>
+
+    </application>
+
+
+</manifest>

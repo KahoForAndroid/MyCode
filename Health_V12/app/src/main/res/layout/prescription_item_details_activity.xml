@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/top_title_include"></include>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            >
+
+            <RelativeLayout
+                android:id="@+id/applyIllness_rela"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:layout_marginTop="1dp"
+                >
+                <TextView
+                    android:id="@+id/applyIllness_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_textSize"
+                    android:text="@string/applyIllness_text"
+                    />
+
+
+                <EditText
+                    android:id="@+id/applyIllness_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/main_color"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:hint="@string/ed_applyIllness"
+                    android:layout_toRightOf="@+id/applyIllness_text"
+                    android:gravity="right"
+                    android:background="@null"
+                    />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/Remarks_rela"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:layout_marginTop="1dp"
+                android:layout_below="@+id/applyIllness_rela"
+                >
+                <TextView
+                    android:id="@+id/remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_textSize"
+                    android:text="@string/Remarks"
+                    />
+
+
+                <EditText
+                    android:id="@+id/Remarks_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/main_textSize"
+                    android:textColor="@color/main_color"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/remark"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="@string/please_input"
+                    android:padding="5dp"
+                    />
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/layout_recy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Remarks_rela"
+                ></android.support.v7.widget.RecyclerView>
+
+
+
+            <Button
+                android:id="@+id/add_Button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/on_click_button"
+                android:text="@string/add_Template"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_below="@+id/layout_recy"
+                />
+
+
+            <Button
+                android:id="@+id/save_Button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/on_click_button"
+                android:text="@string/chat_save"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_below="@+id/add_Button"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/save_Button"
+                ></RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

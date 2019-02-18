@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/top_title_include"/>
+
+
+    <RelativeLayout
+        android:id="@+id/check_healthReport_rela"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/healthReport_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/healthReport_img"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:text="@string/health_log"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right_blue"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/check_particularReport_rela"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/particularReport_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/report_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/particularReport_img"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:text="@string/health_and_particularReport"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right_blue"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/check_medicineReminder_rela"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/medicineReminder_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/alarm_clock"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/medicineReminder_img"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:text="@string/medicineReminder"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right_blue"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <include layout="@layout/top_title_include"/>
+
+    <LinearLayout
+        android:id="@+id/report_lin"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/health_reprot_img"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:src="@drawable/add_health_report_icon"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/special_report_img"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:src="@drawable/special_report_icon"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_lin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        >
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="@color/main_color"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="@string/My_Medical_Examinatoin_Report"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/all_img"
+                android:layout_width="78dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circle_rectangle"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:id="@+id/all_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_textTitleSize"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/health_report_rectangle_img"
+                android:layout_width="78dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circle_rectangle"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/health_report_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health_report"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/main_textTitleSize"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/special_report_rectangle_img"
+                android:layout_width="78dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circle_rectangle"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/Special_report_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Special_report"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/main_textTitleSize"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/report_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"></android.support.v4.view.ViewPager>
+</LinearLayout>

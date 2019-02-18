@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/body_bg"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:text="@string/Vertebra"
+            />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/top"
+        android:background="#4A708B"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:text="@string/report_tips"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/img_rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_marginLeftPercent="17%"
+        app:layout_marginTopPercent="30%"
+        app:layout_marginRightPercent="13%"
+        app:layout_marginBottomPercent="20%"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/viscus" />
+
+    </RelativeLayout>
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/trachea_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="5.5%"
+        app:layout_marginTopPercent="31.5%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/trachea"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/lung_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="5.5%"
+        app:layout_marginTopPercent="38.5%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/lung"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/Liver_gallbladder_and_spleen_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="5.5%"
+        app:layout_marginTopPercent="45.5%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/Liver_gallbladder_and_spleen"
+        />
+
+
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/Liver_sausage_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="6%"
+        app:layout_marginTopPercent="52%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/Liver_sausage"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/Gynaecology_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="4%"
+        app:layout_marginTopPercent="59%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/Gynaecology"
+        android:visibility="gone"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/Blood_blood_vessel_textview"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="1%"
+        app:layout_marginTopPercent="66%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/Blood_blood_vessel"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/skin_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="3%"
+        app:layout_marginTopPercent="72.5%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/skin"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/heart_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="81%"
+        app:layout_marginTopPercent="34%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/heart"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/stomach_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="78%"
+        app:layout_marginTopPercent="42.5%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/stomach"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/kidney_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="76.5%"
+        app:layout_marginTopPercent="51.5%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/kidney"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/andrology_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="79%"
+        app:layout_marginTopPercent="60%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/andrology"
+        />
+
+    <zj.health.health_v1.MyView.MyTextView
+        android:id="@+id/fluid_textview"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_marginLeftPercent="78.5%"
+        app:layout_marginTopPercent="68%"
+        android:background="@drawable/radius_from_body_gary"
+        android:textSize="@dimen/main_textSize"
+        android:textColor="@color/white"
+        android:text="@string/fluid"
+        />
+
+    <Button
+        android:id="@+id/commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/on_click_button"
+        android:text="@string/commit_report"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_textTitleSize"
+        app:layout_marginLeftPercent="20%"
+        app:layout_marginRightPercent="20%"
+        app:layout_marginTopPercent="85%"
+        />
+</android.support.percent.PercentRelativeLayout>

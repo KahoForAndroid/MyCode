@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <RelativeLayout
+        android:id="@+id/delete_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <Button
+            android:id="@+id/delete_Button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/on_click_deletebutton"
+            android:text="@string/delete_Template"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/measurement_type_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/measurement_type"
+            />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+        <TextView
+            android:id="@+id/measurement_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:text="@string/please_input"
+            android:layout_toLeftOf="@+id/img_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Remarks_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:id="@+id/remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/Remarks"
+            />
+
+
+        <EditText
+            android:id="@+id/Remarks_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/remark"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="@string/please_input"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/measurement_much_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/much_of_taking_medicine"
+            />
+
+        <ImageView
+            android:id="@+id/img_right2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+        <TextView
+            android:id="@+id/measurement_much_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_toLeftOf="@+id/img_right2"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/much_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/Schedule_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/Schedule"
+            />
+
+        <ImageView
+            android:id="@+id/img_right3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+        <TextView
+            android:id="@+id/Schedule_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_toLeftOf="@+id/img_right3"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/endDate_rela"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_textSize"
+            android:text="@string/end_date"
+            />
+
+
+        <TextView
+            android:id="@+id/endDate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

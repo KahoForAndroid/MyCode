@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:id="@+id/drug_rela"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <View
+            android:id="@+id/type_topleft_view"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/main_color"
+            />
+        <TextView
+            android:id="@+id/disease_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:textColor="@color/black"
+            android:text="@string/suitable_for_disease"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/type_topleft_view"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/disease_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:textColor="@color/btn_red"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/disease_text"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_toLeftOf="@+id/delete_img"
+            />
+
+        <ImageView
+            android:id="@+id/delete_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/trash"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_bottom_line"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:text="陈医生（家庭医生）"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/trash"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignStart="@+id/type_topleft_view"
+        android:layout_marginTop="15dp"
+        android:background="@color/main_color" />
+
+
+
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        >
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+        <TextView
+            android:id="@+id/check_more_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:textColor="@color/main_color"
+            android:text="@string/edit_prescription_or_onclick_check_more"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/Advice_on_life_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textTitleSize"
+            android:textColor="@color/black"
+            android:text="@string/Advice_on_life"
+            android:layout_below="@+id/check_more_text"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/Advice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_textSize"
+            android:textColor="@color/black"
+            android:layout_below="@+id/Advice_on_life_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+
+        <Button
+            android:id="@+id/send_to_user_button"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/radius_blue"
+            android:text="@string/send_to_user"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignStart="@+id/type_topleft_view"
+        android:layout_marginTop="15dp"
+        android:background="@color/title_bottom_line" />
+
+</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/add_rela"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/adds_icon"
+            android:layout_above="@+id/bottom_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+            android:id="@+id/bottom_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:textColor="#999999"
+            android:text="@string/add_new_prescripttion"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

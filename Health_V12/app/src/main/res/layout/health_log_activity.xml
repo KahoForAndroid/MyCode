@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/top_title_include"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/main_background"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:id="@+id/friend_log_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/friend_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/friend_log_icon"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textTitleSize"
+                android:text="@string/friend_log"
+                android:textColor="@color/black"
+                android:layout_below="@+id/doctor_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/title_bottom_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/data_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/setdata_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/setdata_icon"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textTitleSize"
+                android:text="@string/set_data"
+                android:textColor="@color/black"
+                android:layout_below="@+id/Health_counseling_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/title_bottom_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/report_rela"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/report_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/report_icon"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_textTitleSize"
+                android:text="@string/body_report"
+                android:textColor="@color/black"
+                android:layout_below="@+id/prescription_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+ <android.support.v7.widget.RecyclerView
+     android:id="@+id/body_recycle"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:scrollbars="none"
+     android:layout_marginTop="15dp"
+     ></android.support.v7.widget.RecyclerView>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <zj.health.health_v1.MyView.CustomViewPager
+        android:id="@+id/headlth_log_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></zj.health.health_v1.MyView.CustomViewPager>
+
+
+
+
+</LinearLayout>
